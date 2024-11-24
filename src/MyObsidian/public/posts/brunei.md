@@ -17,4 +17,4 @@ tags:
 layout: layouts/post.njk
 ---
 
-Kuih Lapis looks way too hard to make so we might try to buy it.
+Kuih Lapis looked way too hard to make so we found a lovely shop on Glossop Road to buy it.
