@@ -1,7 +1,3 @@
 {
-  "tags": [
-    "posts"
-  ],
-  "draft": false,
-  "layout": "mypost"
+  "tags": ["posts"]
 }

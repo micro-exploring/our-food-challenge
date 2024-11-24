@@ -1,17 +1,19 @@
 ---
-layout: componnents/homepage.njk
-permalink: /
-cssclasses: ltr
-tags: [home]  
-date: 2022-03-22
-title: Home
+layout: layouts/home.njk
 ---
 
+<div class="illo-container">
 
-# Hello
-Welcome to Yaki's site.
-Here, I'd like to share with you the articles I'm intrested in.
+</div>
 
-Please tell me if you like it:)
+# Yummy World! 
 
+## Eating our way round interesting countries
+
+For our latest quest we have decided to look at those countries that support the [UNESCO World Heritage](https://en.wikipedia.org/wiki/World_Heritage_Sites_by_country) system 
+but don't actually have any Word Heritage Sites.
+
+So evey fortnight we will eat food from each of these countries. But we haven't started quite yet
+
+### Countries
 

@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "479f103666da9139",
+    "type": "split",
+    "children": [
+      {
+        "id": "9bed94fe89b6623f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14f87463902da1d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/MyObsidian/public/posts/brunei.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "brunei"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a611d66a82fe0251",
+    "type": "split",
+    "children": [
+      {
+        "id": "5a2a54fcc44bbce8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "15f40caf180f6bb6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "35a05a1ca9467eaa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "eleventyNavigation",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "13b321e5547d5908",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c4d1848a72879f95",
+    "type": "split",
+    "children": [
+      {
+        "id": "d197f4926bf660f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d35df2107a2fb060",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/MyObsidian/public/posts/11ty-Images.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 11ty-Images"
+            }
+          },
+          {
+            "id": "ea80c5ff6eb4ff8f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/MyObsidian/public/posts/11ty-Images.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 11ty-Images"
+            }
+          },
+          {
+            "id": "917a2924e744e64f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "960b54c88e26e5e7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/MyObsidian/public/posts/11ty-Images.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 11ty-Images"
+            }
+          },
+          {
+            "id": "1880bdff51c3fbaf",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "14f87463902da1d5",
+  "lastOpenFiles": [
+    "src/MyObsidian/public/posts/burundi.md",
+    "src/MyObsidian/public/posts/saint-vincent-and-the-grenadines.md",
+    "src/MyObsidian/public/posts/south-sudan.md",
+    "src/MyObsidian/public/posts/secondpost.md",
+    "src/MyObsidian/public/posts/11ty-Images.md",
+    "src/MyObsidian/public/posts/equatorial-guinea.md",
+    "src/MyObsidian/public/posts/comoros.md",
+    "src/MyObsidian/public/posts/brunei.md",
+    "src/css/styles/style_from_site.css",
+    "src/css/styles/style.css",
+    "src/MyObsidian/public/posts.md",
+    "src/menu/about.md",
+    "src/menu (copy)/tags.njk",
+    "src/menu (copy)/tags-list.njk",
+    "src/menu (copy)/search-index.json.njk",
+    "src/menu (copy)/page-list.njk",
+    "src/menu (copy)/notes.njk",
+    "src/menu (copy)/index.md",
+    "src/menu (copy)/archive.njk",
+    "src/menu (copy)/about-me.md",
+    "src/menu (copy)",
+    "src/_includes/layouts/posts.njk",
+    "src/MyObsidian/public/posts/bhutan.md",
+    "src/MyObsidian/public/posts/tuvalu.md",
+    "src/MyObsidian/public/posts/trinidad-and-tobago.md",
+    "src/MyObsidian/public/posts/tonga.md",
+    "src/MyObsidian/public/posts/timor-leste.md",
+    "src/MyObsidian/public/posts/somalia.md",
+    "src/MyObsidian/public/posts/sierra-leone.md",
+    "src/MyObsidian/public/posts/sao-tome-and-príncipe.md",
+    "src/MyObsidian/public/posts/samoa.md",
+    "src/MyObsidian/public/posts/rwanda.md",
+    "src/MyObsidian/public/posts/niue.md",
+    "src/MyObsidian/public/posts/monaco.md",
+    "src/MyObsidian/public/posts/maldives.md",
+    "src/MyObsidian/public/posts/liberia.md",
+    "Untitled.canvas",
+    "src/MyObsidian/public/Attachments/HTTP_logo.svg",
+    "src/MyObsidian/public/Attachments/msedge_0sbOL3eK3s.png",
+    "src/MyObsidian/public/Attachments/Pasted image 20220424171759.png"
+  ]
+}

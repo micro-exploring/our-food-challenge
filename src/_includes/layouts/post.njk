@@ -1,56 +1,120 @@
 ---
 layout: layouts/base.njk
-permalink: /{{ page.fileSlug }}/
+templateClass: tmpl-home
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/css/jsvectormap.css" integrity="sha512-R/p6hEdcHJdQ5967L0K8A4wO2xyg5SDgFrESWemL+GhQR5EIJ2fsNEnvzEKgr2MCRNgNEJwVQIKDQ68cThxQpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<article class="post" dir={{ cssclasses or metadate.cssclasses }}>
-  <header   class="post__header">
-    <h1>{{ title }}</h1>
-    <div class="post__details">
-      <time datetime="{{ page.date | htmlDateString }}">
-        {{ page.date | readableDate }}
-      </time>
-      <span> | </span>
-     <span>{{ content | readingTime }} read</span>
-	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/js/jsvectormap.min.js" integrity="sha512-qIjvxoJojZ64SLBuklyHGh7Bmc0CXhp0KhsDD19y8q935nh/KgHIpJbXcsoZlzzR2Wf78CpH34jiclEqzZ8quQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/maps/world.js" integrity="sha512-fzlKic/RyjgLIbkRywhW3cYwiI+XgcslngfOzC+p/2D5OBDvJQkp56pBRcfvj7Rd471B4UnweDMBGcPetMse1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  </header>
-	<div class="post__tags">
-      {% for tag in tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
-      {% endfor %}
-    </div>
-	
-  <main class="post__content">
+{# This is the template for individual blog posts–it builds the front matter properties into the page #}
+
+<div class="wrapper post">
+  <div>
+    {# The post front matter includes the title property #}
+    <h1 class="postTitle">{{title}}</h1>
+    
+    <br /> 
+    
+    <img src="https://www.worldatlas.com/r/w425/img/flag/{{iso| lower}}-flag.jpg" height="200" />
+    <img src="https://www.worldometers.info/img/maps_c/{% if locator %}{{locator}}{% else %}{{iso}}{% endif %}-map.gif" height="200"/>
+    <img src="https://www.worldometers.info/img/maps_cl/{% if locator %}{{locator}}{% else %}{{iso}}{% endif %}-locator-map.gif" height="200"/>
+    
+    {# ADD P ELEMENT FROM TODO ON THE NEXT LINE #}
+    
+    <p>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/{{title}}">Wikipedia</a>
+      <a target="_blank" href="https://www.google.com/search?q={{title}}+national+dish">National Dish</a>
+      <a target="_blank" href="https://www.tasteatlas.com/most-popular-dishes-in-{{title | lower | replace(' ', '-') }}">Most Popular</a>
+    </p>
+    
+
+       {% if possibles %}
+    <h3>
+      Possible Dishes
+    </h3>
+    <ul>
+      
+      {%- for dish in possibles -%}
+        <li>{{dish}} - 
+          <a target="_blank" href="https://www.tasteatlas.com/{{dish | lower | replace(' ', '-') }}">Taste Atlas</a>
+          <a target="_blank" href="https://www.google.com/search?q={{title | lower | replace(' ', '+')}}+{{dish | replace(' ', '+') }}+recipe">Google Recipe</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+    
+
+    {% if dishes %}
+    <h3>
+      The Menu
+    </h3>    
+    <ul>
+      {%- for dish in dishes -%}
+        <li>
+          <a target="_blank" href="{{dish.url}}">{{dish.name}}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  
+    {% endif %}
+    {% if possiblesweets %}
+    <h3>
+      Possible Sweet Dishes
+    </h3>
+    <ul>
+      
+      {%- for dish in possiblesweets -%}
+        <li>{{dish}} - 
+          <a target="_blank" href="https://www.tasteatlas.com/{{dish | lower | replace(' ', '-') }}">Taste Atlas</a>
+          <a target="_blank" href="https://www.google.com/search?q={{title | lower | replace(' ', '+')}}+{{dish | replace(' ', '+') }}+recipe">Google Recipe</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+    
+    {% if sweets %}
+    <h3>
+      Dessert
+    </h3>    
+    <ul>
+      {%- for dish in sweets -%}
+        <li>
+          <a target="_blank" href="{{dish.url}}">{{dish.name}}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+    
+    {% endif %}
+    
+    {# Content from the body of the post markdown appears here #}
     {{ content | safe }}
-  </main>
-
-  <aside class="post__aside">
-
-
-    <nav class="post__pagination">
-      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {%- if nextPost %}
-
-        <a href="{{ nextPost.url | url }}">
-          <span>←</span>
-          <span>{{ nextPost.data.title }}</span>
-        </a>
-
-      {% endif %}
-
-      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-      {%- if previousPost %}
-
-        <a href="{{ previousPost.url | url }}">
-          <span>{{ previousPost.data.title }}</span>
-          <span>→</span>
-        </a>
-
-      {% endif %}
-    </nav>
-  </aside>
-
-</article>
+    
+    
+    <div class="controls">
+    {# The previous and next post data is added in .eleventy.js #}
+    {% if prevPost.url %}
+      <p>
+        <strong>Previous post</strong>: 
+        <a class="previous" href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+      </p>
+    {% endif %}
+    {% if nextPost.url %}
+      <p>
+        <strong>Next post</strong>: 
+        <a class="next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+      </p>
+    {% endif %}
+    </div>
+    
+    <script src="https://utteranc.es/client.js"
+      repo="stretchyboy/our-food-challenge"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
+    
+  </div>
+</div>

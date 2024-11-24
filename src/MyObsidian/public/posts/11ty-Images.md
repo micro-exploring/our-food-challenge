@@ -6,11 +6,11 @@ description: How to manage and include images to your site
 ---
 
 ## How to config your obsidian vault 
-Under `Files & Links` define the `Default location for new attachments` attribute to be any value **exept** the `Same folder as current file` .  My definition and recomendation:  
+Under `Files & Links` define the `Default location for new attachments` attribute to be any value **except** the `Same folder as current file` .  My definition and recommendation:  
 ![|90%?my definition](Pasted%20image%2020220424171759.png)
 It's a perfect combination of manage privacy as well as lighting site and publish easily.
 ## mapping the attachments in .eleventy.js file
-change the value of the variable `publishAttachementsDir` to contain the output directory. for exemple:
+change the value of the variable `publishAttachementsDir` to contain the output directory. for example:
 ```js
 const publishAttachementsDir = 'attch';
 ```

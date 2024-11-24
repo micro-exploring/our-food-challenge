@@ -15,7 +15,7 @@ const searchFilter = require("./src/filters/searchFilter");
 
 module.exports = function(eleventyConfig) {
 
-const publishAttachementsDir = 'attch'; //the directory on the published _site where the attachements will be
+const publishAttachmentsDir = 'attch'; //the directory on the published _site where the attachments will be
 
   // Alias so just put `layout: post` and no need to write the full path `layout: layouts/post.njk` 
  eleventyConfig.addLayoutAlias("post", "layouts/post.njk"); 
@@ -42,9 +42,9 @@ const publishAttachementsDir = 'attch'; //the directory on the published _site w
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy({"src/js":"js"});
-  eleventyConfig.addPassthroughCopy({"src/css/images":`${publishAttachementsDir}`});
-  // Copy the relative obsidian img/attachemets  dir to the <publishAttachementsDir> directory
-   eleventyConfig.addPassthroughCopy({"src/MyObsidian/public/Attachments":`${publishAttachementsDir}`});
+  eleventyConfig.addPassthroughCopy({"src/css/images":`${publishAttachmentsDir}`});
+  // Copy the relative obsidian img/attachments  dir to the <publishAttachementsDir> directory
+   eleventyConfig.addPassthroughCopy({"src/MyObsidian/public/Attachments":`${publishAttachmentsDir}`});
 //-----------------------------------------
   eleventyConfig.addPlugin(codeblocks([
     tables,
@@ -149,7 +149,7 @@ const publishAttachementsDir = 'attch'; //the directory on the published _site w
 					!(srcAdrr[1].startsWith('www'))
 					) {
 					const srcIndex = tokens[idx].attrIndex('src');
-					tokens[idx].attrs[srcIndex][1] = `/${publishAttachementsDir}/${srcAdrr[1]}` ;
+					tokens[idx].attrs[srcIndex][1] = `/${publishAttachmentsDir}/${srcAdrr[1]}` ;
 				};
 				
                 return defaultImageRule(tokens, idx, options, env, self);
